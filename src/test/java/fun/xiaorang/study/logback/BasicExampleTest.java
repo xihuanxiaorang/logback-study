@@ -1,5 +1,6 @@
 package fun.xiaorang.study.logback;
 
+import org.junit.jupiter.api.Test;
 import org.slf4j.LoggerFactory;
 
 /**
@@ -7,12 +8,13 @@ import org.slf4j.LoggerFactory;
  * @description <p style = " font-weight:bold ; "><p/>
  * @github <a href="https://github.com/xihuanxiaorang/logback-study">logback-study</a>
  * @Copyright 博客：<a href="https://docs.xiaorang.fun">小让的糖果屋</a>  - show me the code
- * @date 2024/04/26 16:45
+ * @date 2024/04/26 17:42
  */
-public class Example {
-  private static final ch.qos.logback.classic.Logger LOGGER = (ch.qos.logback.classic.Logger) LoggerFactory.getLogger(Example.class);
+public class BasicExampleTest {
+  private static final ch.qos.logback.classic.Logger LOGGER = (ch.qos.logback.classic.Logger) LoggerFactory.getLogger(BasicExampleTest.class);
 
-  public static void main(String[] args) {
-    LOGGER.info("Example log from {}", Example.class.getSimpleName());
+  @Test
+  public void test() {
+    LOGGER.info("Example log from {}", BasicExampleTest.class.getSimpleName());
   }
 }
